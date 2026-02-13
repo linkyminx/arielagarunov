@@ -1,10 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logos & Letters — Philosophy Essays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>This is my free website.</p>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">Logos &amp; Letters</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Essays</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <span class="hero-eyebrow">A Personal Philosophy Journal</span>
+      <h1 class="hero-title">Ideas Worth<br><em>Examining</em></h1>
+      <p class="hero-sub">Essays on ethics, metaphysics, language, and the perennial questions of human existence.</p>
+    </div>
+  </header>
+
+  <!-- SEARCH & FILTER -->
+  <section class="filter-bar">
+    <div class="container">
+      <input type="text" id="search" placeholder="Search essays…" class="search-input" autocomplete="off" />
+      <div class="tag-filters" id="tagFilters">
+        <button class="tag-btn active" data-tag="all">All</button>
+        <button class="tag-btn" data-tag="ethics">Ethics</button>
+        <button class="tag-btn" data-tag="metaphysics">Metaphysics</button>
+        <button class="tag-btn" data-tag="language">Language</button>
+        <button class="tag-btn" data-tag="mind">Philosophy of Mind</button>
+        <button class="tag-btn" data-tag="politics">Political Philosophy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESSAY GRID -->
+  <main class="container essays-section">
+    <div class="essays-grid" id="essaysGrid">
+
+      <article class="essay-card" data-tags="ethics metaphysics">
+        <a href="essay.html?id=1" class="essay-card-link">
+          <div class="essay-meta">
+            <span class="essay-tag">Ethics</span>
+            <span class="essay-date">January 2025</span>
+          </div>
+          <h2 class="essay-title">The Trolley Problem Is Not About Trolleys</h2>
+          <p class="essay-excerpt">What our thought experiments reveal—and conceal—about the nature of moral intuition and the limits of utilitarian calculus.</p>
+          <span class="essay-read">Read essay →</span>
+        </a>
+      </article>
+
+      <article class="essay-card featured" data-tags="metaphysics mind">
+        <a href="essay.html?id=2" class="essay-card-link">
+          <div class="essay-meta">
+            <span class="essay-tag">Metaphysics</span>
+            <span class="essay-date">December 2024</span>
+          </div>
+          <h2 class="essay-title">On the Persistence of Personal Identity Through Time</h2>
+          <p class="essay-excerpt">Are you the same person you were a decade ago? Tracing the threads of continuity from Locke and Hume to contemporary debates in personal identity.</p>
+          <span class="essay-read">Read essay →</span>
+        </a>
+      </article>
+
+      <article class="essay-card" data-tags="language">
+        <a href="essay.html?id=3" class="essay-card-link">
+          <div class="essay-meta">
+            <span class="essay-tag">Language</span>
+            <span class="essay-date">November 2024</span>
+          </div>
+          <h2 class="essay-title">Wittgenstein's Silence and What Lies Beyond It</h2>
+          <p class="essay-excerpt">Revisiting the famous closing proposition of the Tractatus: whereof one cannot speak, thereof one must be silent—but can one still gesture?</p>
+          <span class="essay-read">Read essay →</span>
+        </a>
+      </article>
+
+      <article class="essay-card" data-tags="politics ethics">
+        <a href="essay.html?id=4" class="essay-card-link">
+          <div class="essay-meta">
+            <span class="essay-tag">Political Philosophy</span>
+            <span class="essay-date">October 2024</span>
+          </div>
+          <h2 class="essay-title">Justice as Fairness, Revisited</h2>
+          <p class="essay-excerpt">A critical engagement with Rawls' veil of ignorance: does the original position smuggle in the very assumptions it claims to transcend?</p>
+          <span class="essay-read">Read essay →</span>
+        </a>
+      </article>
+
+      <article class="essay-card" data-tags="mind metaphysics">
+        <a href="essay.html?id=5" class="essay-card-link">
+          <div class="essay-meta">
+            <span class="essay-tag">Philosophy of Mind</span>
+            <span class="essay-date">September 2024</span>
+          </div>
+          <h2 class="essay-title">The Hard Problem Is Harder Than You Think</h2>
+          <p class="essay-excerpt">Chalmers' famous distinction between easy and hard problems of consciousness—and why every proposed solution seems to dissolve into the very mystery it sought to explain.</p>
+          <span class="essay-read">Read essay →</span>
+        </a>
+      </article>
+
+      <article class="essay-card" data-tags="ethics language">
+        <a href="essay.html?id=6" class="essay-card-link">
+          <div class="essay-meta">
+            <span class="essay-tag">Ethics</span>
+            <span class="essay-date">August 2024</span>
+          </div>
+          <h2 class="essay-title">When Is a Lie Not a Lie? On Performative Assertion</h2>
+          <p class="essay-excerpt">Exploring the philosophical geography between sincere and performative assertion—and what this tells us about honesty as a moral category.</p>
+          <span class="essay-read">Read essay →</span>
+        </a>
+      </article>
+
+    </div>
+
+    <p class="no-results" id="noResults" style="display:none;">No essays match your search.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">Logos &amp; Letters</span>
+      <p class="footer-note">Written with care. All essays are original works.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
